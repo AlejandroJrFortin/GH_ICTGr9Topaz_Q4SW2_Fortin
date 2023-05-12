@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Time Converter SW#2</title>
+
+	<style>
+		body{
+			background-color: paleturquoise;overflow-x: hidden;
+		}
+
+		h1 {
+			font-size: 86px;
+		}
+
+		
+	</style>
+</head>
+<body>
+<center><h1>Time Converter</h1>
+</center>
+
+
+
+<br><br><br>
+
+<center><img src="https://www.pngall.com/wp-content/uploads/2016/07/Time-PNG-Clipart.png" width="267" height="267"><br>
+
+<h4>“Life moves pretty fast. You don't stop and look around once in a while, you could miss it.”</h4></center>
+
+<br><br><br><br>
+<div class="row">
+
+<div class="col-xl-3"></div>
+	
+
+<div class="col-xl-3 bg-warning">
+<br>
+<center><h4>Seconds</h4>
+
+ <input type="number" id="num1" placeholder="Input"> <br><br>
+
+<input class="btn bg-danger text-light" type="button" value="To Minutes" onclick="myConverterCalculator()">&nbsp; 
+<input class="btn bg-danger text-light " type="button" value="To Hours" onclick="myConverterCalculatorzz()">&nbsp; 
+<input class="btn bg-danger text-light" type="button" value="To Days" onclick="myConverterCalculatorzzz()">
+<p id="id1"></p></center>
+<br>
+</div>
+
+
+<div class="col-xl-3 bg-danger">
+<br>	
+<center><h4>Minutes</h4>
+
+ <input type="number" id="num2" placeholder="Input"> <br><br>
+
+<input class="btn bg-warning text-dark" type="button" value="To Seconds" onclick="myMinutesCalculator()">&nbsp; 
+<input class="btn bg-warning text-dark " type="button" value="To Hours" onclick="myMinutesCalculatorzz() ">&nbsp; 
+<input class="btn bg-warning text-dark" type="button" value="To Days" onclick="myMinutesCalculatorzzz()">
+<p id="id2"></p></center>
+<br>
+</div>
+
+
+<div class="col-xl-3"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		function myConverterCalculator() {
+			var x = document.getElementById('num1').value;
+			var y = 60;
+			var answer = Number(x) / Number(y); 
+			document.getElementById('id1').innerHTML = "The answer is " + answer;
+	}
+
+			
+			function myConverterCalculatorzz() {
+			var x = document.getElementById('num1').value;
+			var y = 3600;
+			var answer = Number(x) / Number(y); 
+			document.getElementById('id1').innerHTML = "The answer is " + answer;
+		}
+
+		function myConverterCalculatorzzz() {
+			var x = document.getElementById('num1').value;
+			var y = 86400;
+			var answer = Number(x) / Number(y); 
+			document.getElementById('id1').innerHTML = "The answer is " + answer;
+		}
+		
+
+
+
+
+
+		function myMinutesCalculator() {
+			var x = document.getElementById('num2').value;
+			var y = 60;
+			var answer = Number(x) * Number(y); 
+			document.getElementById('id2').innerHTML = "The answer is " + answer;
+	}
+
+			
+			function myMinutesCalculatorzz() {
+			var x = document.getElementById('num2').value;
+			var y = 60;
+			var answer = Number(x) / Number(y); 
+			document.getElementById('id2').innerHTML = "The answer is " + answer;
+		}
+
+		function myMinutesCalculatorzzz() {
+			var x = document.getElementById('num2').value;
+			var y = 1440;
+			var answer = Number(x) / Number(y); 
+			document.getElementById('id2').innerHTML = "The answer is " + answer;
+		}
+	</script>
+</body>
+</html>
